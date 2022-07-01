@@ -20,6 +20,10 @@ ctx.fillRect(0, 0, 640, 480/4*1);
     ctx.fillStyle = "#ffffff";
 ctx.fillRect(this.x, 25, 100, 50);
     this.x += 1;
+    if(this.x > 640){
+      //offscreen, reset
+      this.x = -100;
+    }
     console.log("in Background update, c: "+this.c);
   }
 }
